@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GastosControl</title>
+        <link rel="stylesheet" href="css/vendor/normalize.css">
+        <link rel="stylesheet" href="css/vendor/foundation.min.css" />
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <script type="text/x-handlebars">
+            <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+                    <li class="name">
+                        <h1>{{#link-to 'index'}}GastosControl{{/link-to}}</h1>
+                    </li>
+                </ul>
+                <section class="top-bar-section">
+                    <ul class="left">
+                        <li>{{#link-to 'gastos'}}Gastos{{/link-to}}</li>
+                    </ul>
+                </section>
+            </nav>
+
+            {{outlet}}
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="index">
+            <div class="row">
+              <div class="large-12 columns">
+                <h1>Welcome to Foundation</h1>
+              </div>
+            </div>            
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="panel">
+                        <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+                        <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+                        <p>Once you've exhausted the fun in this document, you should check out:</p>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="gastos">
+            <h1>Gastos</h1>
+            <ul>
+                {{#each item in model}}
+                <li>{{item}}</li>
+                {{/each}}
+            </ul>
+        </script>
+
+        <script src="js/vendor/jquery/jquery-1.10.2.js"></script>
+        <script src="js/vendor/handlebars-1.1.2.js"></script>
+        <script src="js/vendor/ember-1.5.1.js"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/app/routes/gastos.js"></script>
+        <script src="tests/runner.js"></script>
+        <script src="js/vendor/foundation/foundation.min.js"></script>
+        <script>$(document).foundation();</script>
+    </body>
+</html>
