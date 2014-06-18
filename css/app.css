@@ -1,0 +1,7 @@
+    .add-player-form {  }
+        .add-player-form input { margin-bottom: 0; }
+        .add-player-form a { margin-bottom: 0; }
+
+    h1 { font-size: 2.5rem; margin-top: 25px; font-family: 'Roboto', sans-serif; font-weight: 400; }
+    
+    .panel h2 { font-size: 2rem; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 0; }
